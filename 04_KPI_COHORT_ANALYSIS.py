@@ -1,22 +1,6 @@
 ############################################
 # KPI & COHORT ANALIZI: RETENTION RATE
 ############################################
-
-# 3 ADIMDA RETENTION RATE KPI'NIN COHORT ANALIZINE SOKULMASI
-
-# 1. Veri ön işleme
-# 2. Retention matrisinin oluşturulması
-#    1. Her bir müşteri için eşsiz sipariş sayısının hesaplanması
-#    2. Tüm veri setinde bir kereden fazla sipariş veren müşteri oranı.
-#    3. Sipariş aylarının yakalanması.
-#    4. Cohort değişkeninin oluşturulması.
-#    5. Aylık müşteri sayılarını çıkarılması.
-#    6. Periyod numarasının çıkarılması
-#    7. Cohort_pivot'un oluşturulması
-#    8. Retention_matrix'in oluşturulması
-# 3. Retention matrisinin ısı haritası ile görselleştirilmesi
-
-
 ####################################
 # 1. Veri ön işleme
 ####################################
@@ -46,11 +30,6 @@ df.dropna(subset=['CustomerID'], inplace=True)
 df = df[['CustomerID', 'InvoiceNo', 'InvoiceDate']].drop_duplicates()
 
 df.shape
-
-
-
-
-
 
 ####################################
 # 2. Retention matrisinin oluşturulması
@@ -177,36 +156,6 @@ sns.heatmap(cohort_size_df,
             ax=ax[0])
 fig.tight_layout()
 plt.show()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # RECAP
